@@ -1,0 +1,1102 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:43 (project)"
+    message: |
+      The system is: Darwin - 24.6.0 - arm64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:43 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/opt/llvm/bin/clang 
+      Build flags: -g;-O1;-fno-omit-frame-pointer;-fsanitize=address,undefined
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is Clang, found in:
+        /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/4.0.0-rc5/CompilerIdC/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:43 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-u0ETx0"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-u0ETx0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-u0ETx0'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c826c/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c826c.dir/build.make CMakeFiles/cmTC_c826c.dir/build
+        Building C object CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined    -v -Wl,-v -MD -MT CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o -c /Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeCCompilerABI.c
+        Homebrew clang version 21.1.1
+        Target: arm64-apple-darwin24.6.0
+        Thread model: posix
+        InstalledDir: /opt/homebrew/Cellar/llvm/21.1.1/bin
+        Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin24.cfg
+        System configuration file directory: /opt/homebrew/etc/clang
+        User configuration file directory: /Users/zhayi/.config/clang
+        clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         (in-process)
+         "/opt/homebrew/Cellar/llvm/21.1.1/bin/clang-21" -cc1 -triple arm64-apple-macosx15.0.0 -O1 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=15.4 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-modulemap-allow-subdirectory-search -enable-tlsdesc -target-cpu apple-m1 -target-feature +v8.4a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debug-info-kind=standalone -dwarf-version=5 -debugger-tuning=lldb -fdebug-compilation-dir=/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-u0ETx0 -target-linker-version 1167.4.1 -v -fcoverage-compilation-dir=/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-u0ETx0 -resource-dir /opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21 -dependency-file CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/SubFrameworks -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/Library/Frameworks -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fsanitize=address,alignment,array-bounds,bool,builtin,enum,float-cast-overflow,function,integer-divide-by-zero,nonnull-attribute,null,object-size,pointer-overflow,return,returns-nonnull-attribute,shift-base,shift-exponent,signed-integer-overflow,unreachable,vla-bound -fsanitize-recover=alignment,array-bounds,bool,builtin,enum,float-cast-overflow,function,integer-divide-by-zero,nonnull-attribute,null,object-size,pointer-overflow,returns-nonnull-attribute,shift-base,shift-exponent,signed-integer-overflow,vla-bound -fsanitize-merge=alignment,array-bounds,bool,builtin,enum,float-cast-overflow,function,integer-divide-by-zero,nonnull-attribute,null,object-size,pointer-overflow,return,returns-nonnull-attribute,shift-base,shift-exponent,signed-integer-overflow,unreachable,vla-bound -fsanitize-system-ignorelist=/opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/share/asan_ignorelist.txt -fno-sanitize-memory-param-retval -fsanitize-address-use-after-scope -fsanitize-address-globals-dead-stripping -fno-assume-sane-operator-new -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o -x c /Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 21.1.1 based upon LLVM 21.1.1 default target arm64-apple-darwin24.6.0
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/local/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/SubFrameworks"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        Linking C executable cmTC_c826c
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c826c.dir/link.txt --verbose=1
+        Homebrew clang version 21.1.1
+        Target: arm64-apple-darwin24.6.0
+        Thread model: posix
+        InstalledDir: /opt/homebrew/Cellar/llvm/21.1.1/bin
+        Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin24.cfg
+        System configuration file directory: /opt/homebrew/etc/clang
+        User configuration file directory: /Users/zhayi/.config/clang
+         "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/21.1.1/lib/libLTO.dylib -no_deduplicate -dynamic -arch arm64 -platform_version macos 15.0.0 15.4 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_c826c -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o /opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/lib/darwin/libclang_rt.asan_osx_dynamic.dylib -rpath @executable_path -rpath /opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/lib/darwin -lSystem /opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld PROJECT:ld-1115.7.3
+        BUILD 23:52:02 Dec  5 2024
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 21.1.1 (static support for 29, runtime is 30)
+        TAPI support using: Apple TAPI version 16.0.0 (tapi-1600.0.11.9)
+        Library search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined -v -Wl,-v CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o -o cmTC_c826c
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:43 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:191 (message)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:43 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/include]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include]
+        end of search list found
+        collapse include dir [/opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/include] ==> [/opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/include]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include]
+        implicit include dirs: [/opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/include;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:43 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-u0ETx0']
+        ignore line: []
+        ignore line: [Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c826c/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c826c.dir/build.make CMakeFiles/cmTC_c826c.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address undefined    -v -Wl -v -MD -MT CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o -c /Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeCCompilerABI.c]
+        ignore line: [Homebrew clang version 21.1.1]
+        ignore line: [Target: arm64-apple-darwin24.6.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/homebrew/Cellar/llvm/21.1.1/bin]
+        ignore line: [Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin24.cfg]
+        ignore line: [System configuration file directory: /opt/homebrew/etc/clang]
+        ignore line: [User configuration file directory: /Users/zhayi/.config/clang]
+        ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ (in-process)]
+        ignore line: [ "/opt/homebrew/Cellar/llvm/21.1.1/bin/clang-21" -cc1 -triple arm64-apple-macosx15.0.0 -O1 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=15.4 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-modulemap-allow-subdirectory-search -enable-tlsdesc -target-cpu apple-m1 -target-feature +v8.4a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debug-info-kind=standalone -dwarf-version=5 -debugger-tuning=lldb -fdebug-compilation-dir=/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-u0ETx0 -target-linker-version 1167.4.1 -v -fcoverage-compilation-dir=/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-u0ETx0 -resource-dir /opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21 -dependency-file CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/SubFrameworks -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/Library/Frameworks -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fsanitize=address alignment array-bounds bool builtin enum float-cast-overflow function integer-divide-by-zero nonnull-attribute null object-size pointer-overflow return returns-nonnull-attribute shift-base shift-exponent signed-integer-overflow unreachable vla-bound -fsanitize-recover=alignment array-bounds bool builtin enum float-cast-overflow function integer-divide-by-zero nonnull-attribute null object-size pointer-overflow returns-nonnull-attribute shift-base shift-exponent signed-integer-overflow vla-bound -fsanitize-merge=alignment array-bounds bool builtin enum float-cast-overflow function integer-divide-by-zero nonnull-attribute null object-size pointer-overflow return returns-nonnull-attribute shift-base shift-exponent signed-integer-overflow unreachable vla-bound -fsanitize-system-ignorelist=/opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/share/asan_ignorelist.txt -fno-sanitize-memory-param-retval -fsanitize-address-use-after-scope -fsanitize-address-globals-dead-stripping -fno-assume-sane-operator-new -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o -x c /Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 21.1.1 based upon LLVM 21.1.1 default target arm64-apple-darwin24.6.0]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/SubFrameworks"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [Linking C executable cmTC_c826c]
+        ignore line: [/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c826c.dir/link.txt --verbose=1]
+        ignore line: [Homebrew clang version 21.1.1]
+        ignore line: [Target: arm64-apple-darwin24.6.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/homebrew/Cellar/llvm/21.1.1/bin]
+        ignore line: [Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin24.cfg]
+        ignore line: [System configuration file directory: /opt/homebrew/etc/clang]
+        ignore line: [User configuration file directory: /Users/zhayi/.config/clang]
+        link line: [ "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/21.1.1/lib/libLTO.dylib -no_deduplicate -dynamic -arch arm64 -platform_version macos 15.0.0 15.4 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_c826c -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o /opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/lib/darwin/libclang_rt.asan_osx_dynamic.dylib -rpath @executable_path -rpath /opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/lib/darwin -lSystem /opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+          arg [/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/opt/homebrew/Cellar/llvm/21.1.1/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-no_deduplicate] ==> ignore
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [15.0.0] ==> ignore
+          arg [15.4] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_c826c] ==> ignore
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_c826c.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [/opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/lib/darwin/libclang_rt.asan_osx_dynamic.dylib] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [@executable_path] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/lib/darwin] ==> ignore
+          arg [-lSystem] ==> lib [System]
+          arg [/opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+        linker tool for 'C': /usr/bin/ld
+        Library search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks]
+        remove lib [System]
+        remove lib [/opt/homebrew/Cellar/llvm/21.1.1/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/lib/swift]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:264 (cmake_determine_linker_id)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:43 (project)"
+    message: |
+      Running the C compiler's linker: "/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld PROJECT:ld-1115.7.3
+      BUILD 23:52:02 Dec  5 2024
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+      will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 16.0.0 (static support for 29, runtime is 29)
+      TAPI support using: Apple TAPI version 16.0.0 (tapi-1600.0.11.9)
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "ConfigureChecks.cmake:9 (check_include_file)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Looking for dlfcn.h"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-OzDTB7"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-OzDTB7"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_DLFCN_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-OzDTB7'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_fbdb1/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_fbdb1.dir/build.make CMakeFiles/cmTC_fbdb1.dir/build
+        Building C object CMakeFiles/cmTC_fbdb1.dir/CheckIncludeFile.c.o
+        /opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_fbdb1.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_fbdb1.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_fbdb1.dir/CheckIncludeFile.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-OzDTB7/CheckIncludeFile.c
+        Linking C executable cmTC_fbdb1
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fbdb1.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_fbdb1.dir/CheckIncludeFile.c.o -o cmTC_fbdb1
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "ConfigureChecks.cmake:10 (check_include_file)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Looking for fcntl.h"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-uRhNCy"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-uRhNCy"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_FCNTL_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-uRhNCy'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0550d/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_0550d.dir/build.make CMakeFiles/cmTC_0550d.dir/build
+        Building C object CMakeFiles/cmTC_0550d.dir/CheckIncludeFile.c.o
+        /opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_0550d.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_0550d.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_0550d.dir/CheckIncludeFile.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-uRhNCy/CheckIncludeFile.c
+        Linking C executable cmTC_0550d
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0550d.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_0550d.dir/CheckIncludeFile.c.o -o cmTC_0550d
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "ConfigureChecks.cmake:11 (check_include_file)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Looking for inttypes.h"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-nSjnk6"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-nSjnk6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_INTTYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-nSjnk6'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_69c12/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_69c12.dir/build.make CMakeFiles/cmTC_69c12.dir/build
+        Building C object CMakeFiles/cmTC_69c12.dir/CheckIncludeFile.c.o
+        /opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_69c12.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_69c12.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_69c12.dir/CheckIncludeFile.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-nSjnk6/CheckIncludeFile.c
+        Linking C executable cmTC_69c12
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69c12.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_69c12.dir/CheckIncludeFile.c.o -o cmTC_69c12
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "ConfigureChecks.cmake:12 (check_include_file)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Looking for memory.h"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-xJ9BnM"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-xJ9BnM"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_MEMORY_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-xJ9BnM'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_de51f/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_de51f.dir/build.make CMakeFiles/cmTC_de51f.dir/build
+        Building C object CMakeFiles/cmTC_de51f.dir/CheckIncludeFile.c.o
+        /opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_de51f.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_de51f.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_de51f.dir/CheckIncludeFile.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-xJ9BnM/CheckIncludeFile.c
+        Linking C executable cmTC_de51f
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_de51f.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_de51f.dir/CheckIncludeFile.c.o -o cmTC_de51f
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "ConfigureChecks.cmake:13 (check_include_file)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-BO2AIA"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-BO2AIA"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-BO2AIA'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_41355/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_41355.dir/build.make CMakeFiles/cmTC_41355.dir/build
+        Building C object CMakeFiles/cmTC_41355.dir/CheckIncludeFile.c.o
+        /opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_41355.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_41355.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_41355.dir/CheckIncludeFile.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-BO2AIA/CheckIncludeFile.c
+        Linking C executable cmTC_41355
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41355.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_41355.dir/CheckIncludeFile.c.o -o cmTC_41355
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "ConfigureChecks.cmake:14 (check_include_file)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Looking for stdlib.h"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-SQAV6q"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-SQAV6q"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_STDLIB_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-SQAV6q'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d753e/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_d753e.dir/build.make CMakeFiles/cmTC_d753e.dir/build
+        Building C object CMakeFiles/cmTC_d753e.dir/CheckIncludeFile.c.o
+        /opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_d753e.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_d753e.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_d753e.dir/CheckIncludeFile.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-SQAV6q/CheckIncludeFile.c
+        Linking C executable cmTC_d753e
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d753e.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_d753e.dir/CheckIncludeFile.c.o -o cmTC_d753e
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "ConfigureChecks.cmake:15 (check_include_file)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Looking for strings.h"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-kTaVOJ"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-kTaVOJ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_STRINGS_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-kTaVOJ'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d954a/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_d954a.dir/build.make CMakeFiles/cmTC_d954a.dir/build
+        Building C object CMakeFiles/cmTC_d954a.dir/CheckIncludeFile.c.o
+        /opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_d954a.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_d954a.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_d954a.dir/CheckIncludeFile.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-kTaVOJ/CheckIncludeFile.c
+        Linking C executable cmTC_d954a
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d954a.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_d954a.dir/CheckIncludeFile.c.o -o cmTC_d954a
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "ConfigureChecks.cmake:16 (check_include_file)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Looking for string.h"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-oIPyZg"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-oIPyZg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_STRING_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-oIPyZg'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_3c75c/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_3c75c.dir/build.make CMakeFiles/cmTC_3c75c.dir/build
+        Building C object CMakeFiles/cmTC_3c75c.dir/CheckIncludeFile.c.o
+        /opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_3c75c.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_3c75c.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_3c75c.dir/CheckIncludeFile.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-oIPyZg/CheckIncludeFile.c
+        Linking C executable cmTC_3c75c
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c75c.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_3c75c.dir/CheckIncludeFile.c.o -o cmTC_3c75c
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "ConfigureChecks.cmake:17 (check_include_file)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Looking for sys/stat.h"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-dSJ4De"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-dSJ4De"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_SYS_STAT_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-dSJ4De'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_bfcf4/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_bfcf4.dir/build.make CMakeFiles/cmTC_bfcf4.dir/build
+        Building C object CMakeFiles/cmTC_bfcf4.dir/CheckIncludeFile.c.o
+        /opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_bfcf4.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_bfcf4.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_bfcf4.dir/CheckIncludeFile.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-dSJ4De/CheckIncludeFile.c
+        Linking C executable cmTC_bfcf4
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bfcf4.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_bfcf4.dir/CheckIncludeFile.c.o -o cmTC_bfcf4
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "ConfigureChecks.cmake:18 (check_include_file)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-zIkdoo"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-zIkdoo"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-zIkdoo'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_db0c3/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_db0c3.dir/build.make CMakeFiles/cmTC_db0c3.dir/build
+        Building C object CMakeFiles/cmTC_db0c3.dir/CheckIncludeFile.c.o
+        /opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_db0c3.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_db0c3.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_db0c3.dir/CheckIncludeFile.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-zIkdoo/CheckIncludeFile.c
+        Linking C executable cmTC_db0c3
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db0c3.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_db0c3.dir/CheckIncludeFile.c.o -o cmTC_db0c3
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "ConfigureChecks.cmake:19 (check_include_file)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Looking for unistd.h"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-xdTH9O"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-xdTH9O"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_UNISTD_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-xdTH9O'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5b545/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_5b545.dir/build.make CMakeFiles/cmTC_5b545.dir/build
+        Building C object CMakeFiles/cmTC_5b545.dir/CheckIncludeFile.c.o
+        /opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_5b545.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_5b545.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_5b545.dir/CheckIncludeFile.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-xdTH9O/CheckIncludeFile.c
+        Linking C executable cmTC_5b545
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b545.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_5b545.dir/CheckIncludeFile.c.o -o cmTC_5b545
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckSymbolExists.cmake:160 (try_compile)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckSymbolExists.cmake:65 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "ConfigureChecks.cmake:21 (check_symbol_exists)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Looking for getpagesize"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-ApL4zK"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-ApL4zK"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_GETPAGESIZE"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-ApL4zK'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6c3b2/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_6c3b2.dir/build.make CMakeFiles/cmTC_6c3b2.dir/build
+        Building C object CMakeFiles/cmTC_6c3b2.dir/CheckSymbolExists.c.o
+        /opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_6c3b2.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_6c3b2.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_6c3b2.dir/CheckSymbolExists.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-ApL4zK/CheckSymbolExists.c
+        Linking C executable cmTC_6c3b2
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c3b2.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_6c3b2.dir/CheckSymbolExists.c.o -o cmTC_6c3b2
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckSymbolExists.cmake:160 (try_compile)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckSymbolExists.cmake:65 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "ConfigureChecks.cmake:22 (check_symbol_exists)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Looking for mmap"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-7xXHcw"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-7xXHcw"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_MMAP"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-7xXHcw'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_20c98/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_20c98.dir/build.make CMakeFiles/cmTC_20c98.dir/build
+        Building C object CMakeFiles/cmTC_20c98.dir/CheckSymbolExists.c.o
+        /opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_20c98.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_20c98.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_20c98.dir/CheckSymbolExists.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-7xXHcw/CheckSymbolExists.c
+        Linking C executable cmTC_20c98
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20c98.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_20c98.dir/CheckSymbolExists.c.o -o cmTC_20c98
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckSymbolExists.cmake:160 (try_compile)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckSymbolExists.cmake:65 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "ConfigureChecks.cmake:23 (check_symbol_exists)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Looking for getrandom"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-iKsmQh"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-iKsmQh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_GETRANDOM"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-iKsmQh'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6409b/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_6409b.dir/build.make CMakeFiles/cmTC_6409b.dir/build
+        Building C object CMakeFiles/cmTC_6409b.dir/CheckSymbolExists.c.o
+        /opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_6409b.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_6409b.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_6409b.dir/CheckSymbolExists.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-iKsmQh/CheckSymbolExists.c
+        /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-iKsmQh/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'getrandom'
+            8 |   return ((int*)(&getrandom))[argc];
+              |                   ^~~~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_6409b.dir/CheckSymbolExists.c.o] Error 1
+        make: *** [cmTC_6409b/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "ConfigureChecks.cmake:25 (check_c_source_compiles)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Performing Test HAVE_ARC4RANDOM_BUF"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-aJT6FI"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-aJT6FI"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_ARC4RANDOM_BUF"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-aJT6FI'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_145f0/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_145f0.dir/build.make CMakeFiles/cmTC_145f0.dir/build
+        Building C object CMakeFiles/cmTC_145f0.dir/src.c.o
+        /opt/homebrew/opt/llvm/bin/clang -DHAVE_ARC4RANDOM_BUF  -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_145f0.dir/src.c.o -MF CMakeFiles/cmTC_145f0.dir/src.c.o.d -o CMakeFiles/cmTC_145f0.dir/src.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-aJT6FI/src.c
+        Linking C executable cmTC_145f0
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_145f0.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_145f0.dir/src.c.o -o cmTC_145f0
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "ConfigureChecks.cmake:37 (check_c_source_compiles)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Performing Test HAVE_ARC4RANDOM"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-CQvNwk"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-CQvNwk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_ARC4RANDOM"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-CQvNwk'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_164dc/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_164dc.dir/build.make CMakeFiles/cmTC_164dc.dir/build
+        Building C object CMakeFiles/cmTC_164dc.dir/src.c.o
+        /opt/homebrew/opt/llvm/bin/clang -DHAVE_ARC4RANDOM  -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_164dc.dir/src.c.o -MF CMakeFiles/cmTC_164dc.dir/src.c.o.d -o CMakeFiles/cmTC_164dc.dir/src.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-CQvNwk/src.c
+        Linking C executable cmTC_164dc
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_164dc.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_164dc.dir/src.c.o -o cmTC_164dc
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckIncludeFiles.cmake:141 (try_compile)"
+      - "ConfigureChecks.cmake:51 (check_include_files)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Looking for 4 include files stdlib.h, ..., float.h"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-JyRcCj"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-JyRcCj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "STDC_HEADERS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-JyRcCj'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_de38f/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_de38f.dir/build.make CMakeFiles/cmTC_de38f.dir/build
+        Building C object CMakeFiles/cmTC_de38f.dir/STDC_HEADERS.c.o
+        /opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_de38f.dir/STDC_HEADERS.c.o -MF CMakeFiles/cmTC_de38f.dir/STDC_HEADERS.c.o.d -o CMakeFiles/cmTC_de38f.dir/STDC_HEADERS.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-JyRcCj/STDC_HEADERS.c
+        Linking C executable cmTC_de38f
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_de38f.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_de38f.dir/STDC_HEADERS.c.o -o cmTC_de38f
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "ConfigureChecks.cmake:62 (check_c_source_compiles)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Performing Test HAVE_OFF_T"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-fPprz2"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-fPprz2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_OFF_T"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-fPprz2'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c6dc1/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c6dc1.dir/build.make CMakeFiles/cmTC_c6dc1.dir/build
+        Building C object CMakeFiles/cmTC_c6dc1.dir/src.c.o
+        /opt/homebrew/opt/llvm/bin/clang -DHAVE_OFF_T  -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_c6dc1.dir/src.c.o -MF CMakeFiles/cmTC_c6dc1.dir/src.c.o.d -o CMakeFiles/cmTC_c6dc1.dir/src.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-fPprz2/src.c
+        Linking C executable cmTC_c6dc1
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c6dc1.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_c6dc1.dir/src.c.o -o cmTC_c6dc1
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "ConfigureChecks.cmake:76 (check_c_source_compiles)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Performing Test HAVE_GETENTROPY"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-3CvF59"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-3CvF59"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_GETENTROPY"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-3CvF59'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_190cc/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_190cc.dir/build.make CMakeFiles/cmTC_190cc.dir/build
+        Building C object CMakeFiles/cmTC_190cc.dir/src.c.o
+        /opt/homebrew/opt/llvm/bin/clang -DHAVE_GETENTROPY  -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_190cc.dir/src.c.o -MF CMakeFiles/cmTC_190cc.dir/src.c.o.d -o CMakeFiles/cmTC_190cc.dir/src.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-3CvF59/src.c
+        Linking C executable cmTC_190cc
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_190cc.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_190cc.dir/src.c.o -o cmTC_190cc
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "ConfigureChecks.cmake:97 (check_c_source_compiles)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Performing Test HAVE_SYSCALL_GETRANDOM"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-JVObd9"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-JVObd9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_SYSCALL_GETRANDOM"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-JVObd9'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e2ca5/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_e2ca5.dir/build.make CMakeFiles/cmTC_e2ca5.dir/build
+        Building C object CMakeFiles/cmTC_e2ca5.dir/src.c.o
+        /opt/homebrew/opt/llvm/bin/clang -DHAVE_SYSCALL_GETRANDOM  -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99 -MD -MT CMakeFiles/cmTC_e2ca5.dir/src.c.o -MF CMakeFiles/cmTC_e2ca5.dir/src.c.o.d -o CMakeFiles/cmTC_e2ca5.dir/src.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-JVObd9/src.c
+        /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-JVObd9/src.c:7:13: warning: 'syscall' is deprecated: first deprecated in macOS 10.12 - syscall(2) is unsupported; please switch to a supported interface. For SYS_kdebug_trace use kdebug_signpost(). [-Wdeprecated-declarations]
+            7 |             syscall(SYS_getrandom, NULL, 0, 0);
+              |             ^
+        /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/unistd.h:744:6: note: 'syscall' has been explicitly marked deprecated here
+          744 | int      syscall(int, ...);
+              |          ^
+        /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-JVObd9/src.c:7:21: error: use of undeclared identifier 'SYS_getrandom'
+            7 |             syscall(SYS_getrandom, NULL, 0, 0);
+              |                     ^~~~~~~~~~~~~
+        1 warning and 1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_e2ca5.dir/src.c.o] Error 1
+        make: *** [cmTC_e2ca5/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "ConfigureChecks.cmake:113 (check_c_compiler_flag)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Performing Test _FLAG_DETECTION_UNUSABLE"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-ADXsVx"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-ADXsVx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "_FLAG_DETECTION_UNUSABLE"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-ADXsVx'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0513d/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_0513d.dir/build.make CMakeFiles/cmTC_0513d.dir/build
+        Building C object CMakeFiles/cmTC_0513d.dir/src.c.o
+        /opt/homebrew/opt/llvm/bin/clang -D_FLAG_DETECTION_UNUSABLE  -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99   -no-such-thing -MD -MT CMakeFiles/cmTC_0513d.dir/src.c.o -MF CMakeFiles/cmTC_0513d.dir/src.c.o.d -o CMakeFiles/cmTC_0513d.dir/src.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-ADXsVx/src.c
+        clang: error: unknown argument: '-no-such-thing'
+        make[1]: *** [CMakeFiles/cmTC_0513d.dir/src.c.o] Error 1
+        make: *** [cmTC_0513d/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "ConfigureChecks.cmake:125 (check_c_compiler_flag)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Performing Test FLAG_WSTRICT_ALIASING"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-u1tFOj"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-u1tFOj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "FLAG_WSTRICT_ALIASING"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-u1tFOj'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8296f/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_8296f.dir/build.make CMakeFiles/cmTC_8296f.dir/build
+        Building C object CMakeFiles/cmTC_8296f.dir/src.c.o
+        /opt/homebrew/opt/llvm/bin/clang -DFLAG_WSTRICT_ALIASING  -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99   -Wstrict-aliasing=3 -MD -MT CMakeFiles/cmTC_8296f.dir/src.c.o -MF CMakeFiles/cmTC_8296f.dir/src.c.o.d -o CMakeFiles/cmTC_8296f.dir/src.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-u1tFOj/src.c
+        warning: unknown warning option '-Wstrict-aliasing=3'; did you mean '-Wstring-plus-int'? [-Wunknown-warning-option]
+        1 warning generated.
+        Linking C executable cmTC_8296f
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8296f.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_8296f.dir/src.c.o -o cmTC_8296f
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "ConfigureChecks.cmake:126 (check_c_compiler_flag)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Performing Test FLAG_WIMPLICIT_FALLTHROUGH"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-Lf2YVg"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-Lf2YVg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "FLAG_WIMPLICIT_FALLTHROUGH"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-Lf2YVg'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7f4d8/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_7f4d8.dir/build.make CMakeFiles/cmTC_7f4d8.dir/build
+        Building C object CMakeFiles/cmTC_7f4d8.dir/src.c.o
+        /opt/homebrew/opt/llvm/bin/clang -DFLAG_WIMPLICIT_FALLTHROUGH  -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99   -Wimplicit-fallthrough -MD -MT CMakeFiles/cmTC_7f4d8.dir/src.c.o -MF CMakeFiles/cmTC_7f4d8.dir/src.c.o.d -o CMakeFiles/cmTC_7f4d8.dir/src.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-Lf2YVg/src.c
+        Linking C executable cmTC_7f4d8
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7f4d8.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_7f4d8.dir/src.c.o -o cmTC_7f4d8
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "ConfigureChecks.cmake:127 (check_c_compiler_flag)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Performing Test FLAG_VISIBILITY"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-kKrN6g"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-kKrN6g"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "FLAG_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-kKrN6g'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f5d93/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_f5d93.dir/build.make CMakeFiles/cmTC_f5d93.dir/build
+        Building C object CMakeFiles/cmTC_f5d93.dir/src.c.o
+        /opt/homebrew/opt/llvm/bin/clang -DFLAG_VISIBILITY  -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -std=c99   -fvisibility=hidden -MD -MT CMakeFiles/cmTC_f5d93.dir/src.c.o -MF CMakeFiles/cmTC_f5d93.dir/src.c.o.d -o CMakeFiles/cmTC_f5d93.dir/src.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-kKrN6g/src.c
+        Linking C executable cmTC_f5d93
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f5d93.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_f5d93.dir/src.c.o -o cmTC_f5d93
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-4.0/Modules/CheckLibraryExists.cmake:112 (try_compile)"
+      - "ConfigureChecks.cmake:130 (check_library_exists)"
+      - "CMakeLists.txt:273 (include)"
+    checks:
+      - "Looking for cos in m"
+    directories:
+      source: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-zvA2Z5"
+      binary: "/Users/zhayi/University/\u5927\u56db\u4e0b/\u8f6f\u4ef6\u5ea6\u91cf\u6280\u672f/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-zvA2Z5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fsanitize=address,undefined"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "_EXPAT_LIBM_FOUND"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-zvA2Z5'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_bd626/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_bd626.dir/build.make CMakeFiles/cmTC_bd626.dir/build
+        Building C object CMakeFiles/cmTC_bd626.dir/CheckFunctionExists.c.o
+        /opt/homebrew/opt/llvm/bin/clang   -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined -DCHECK_FUNCTION_EXISTS=cos -std=c99 -MD -MT CMakeFiles/cmTC_bd626.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_bd626.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_bd626.dir/CheckFunctionExists.c.o -c /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-zvA2Z5/CheckFunctionExists.c
+        /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-zvA2Z5/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'cos' [-Wincompatible-library-redeclaration]
+            7 |   CHECK_FUNCTION_EXISTS(void);
+              |   ^
+        <command line>:1:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+            1 | #define CHECK_FUNCTION_EXISTS cos
+              |                               ^
+        /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/libexpat-asan/CMakeFiles/CMakeScratch/TryCompile-zvA2Z5/CheckFunctionExists.c:7:3: note: 'cos' is a builtin with type 'double (double)'
+        <command line>:1:31: note: expanded from macro 'CHECK_FUNCTION_EXISTS'
+            1 | #define CHECK_FUNCTION_EXISTS cos
+              |                               ^
+        1 warning generated.
+        Linking C executable cmTC_bd626
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd626.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang -g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined -DCHECK_FUNCTION_EXISTS=cos -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=address,undefined  CMakeFiles/cmTC_bd626.dir/CheckFunctionExists.c.o -o cmTC_bd626  -lm
+        
+      exitCode: 0
+...

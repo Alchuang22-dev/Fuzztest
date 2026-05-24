@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/build/custom-fuzzer/expat_file_harness_asan"
+relocations:     []
+...

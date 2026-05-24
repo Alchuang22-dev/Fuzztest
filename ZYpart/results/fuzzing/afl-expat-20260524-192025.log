@@ -1,0 +1,78 @@
+[1;92m[+] [0mEnabled environment variable AFL_SKIP_CPUFREQ with value 1[0m
+[1;92m[+] [0mEnabled environment variable AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES with value 1[0m
+[1;92m[+] [0mEnabled environment variable AFL_NO_UI with value 1[0m
+[1;92m[+] [0mEnabled environment variable AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES with value 1[0m
+[1;94m[*] [0mSpinning up the fork server...[0m
+[1;92m[+] [0mAll right - new fork server model v1 is up.[0m
+[1;94m[*] [0mTarget map size: 7941[0m
+[0;36mafl-fuzz++4.40c[0m based on afl by Michal Zalewski and a large online community
+[1;92m[+] [0mAFL++ is maintained by Marc "van Hauser" Heuse, Dominik Maier, Andrea Fioraldi and Heiko "hexcoder" Eißfeldt[0m
+[1;92m[+] [0mAFL++ is open source, get it at https://github.com/AFLplusplus/AFLplusplus[0m
+[1;92m[+] [0mNOTE: AFL++ >= v3 has changed defaults and behaviours - see README.md[0m
+[1;92m[+] [0mNo -M/-S set, autoconfiguring for "-S default"[0m
+[1;94m[*] [0mGetting to work...[0m
+[1;92m[+] [0mUsing exploration-based constant power schedule (EXPLORE)[0m
+[1;92m[+] [0mEnabled testcache with 50 MB[0m
+[1;92m[+] [0mGenerating fuzz data with a length of min=1 max=1048576[0m
+[1;92m[+] [0mFrameShift status: enabled (10% overhead configured)[0m
+
+[1;91m[-] [0mWhoops, your system is configured to forward crash notifications to an
+    external crash reporting utility. This will cause issues due to the
+    extended delay between the fuzzed binary malfunctioning and this fact
+    being relayed to the fuzzer via the standard waitpid() API.
+
+    To avoid having crashes misinterpreted as timeouts, please run the
+    following commands:
+
+    SL=/System/Library; PL=com.apple.ReportCrash
+    launchctl unload -w ${SL}/LaunchAgents/${PL}.plist
+    sudo launchctl unload -w ${SL}/LaunchDaemons/${PL}.Root.plist
+[1;92m[+] [0mDisabling the UI because AFL_NO_UI is set.[0m
+[1;92m[+] [0mYou have 8 CPU cores and 5 runnable tasks (utilization: 62%).[0m
+[1;92m[+] [0mTry parallel jobs - see /opt/homebrew/Cellar/afl++/4.40c/share/doc/afl/fuzzing_in_depth.md#c-using-multiple-cores[0m
+[1;94m[*] [0mSetting up output directories...[0m
+[1;92m[+] [0mOutput directory exists but deemed OK to reuse.[0m
+[1;94m[*] [0mDeleting old session data...[0m
+[1;92m[+] [0mOutput dir cleanup successful.[0m
+[1;94m[*] [0mValidating target binary...[0m
+[1;94m[*] [0mScanning '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/fuzz/seeds'...[0m
+[1;94m[*] [0mCreating hard links for all input files...[0m
+[1;92m[+] [0mLoaded a total of 6 seeds.[0m
+[1;94m[*] [0mNo auto-generated dictionary tokens to reuse.[0m
+[1;94m[*] [0mLoading extra dictionary from '/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/fuzz/dict/xml.dict' (level 0)...[0m
+[1;94m[*] [0mLoaded 24 extra tokens, size range 1 B to 9 B.[0m
+[1;92m[+] [0mLoaded a total of 24 extras.[0m
+[1;94m[*] [0mAttempting dry run with 'id:000000,time:0,execs:0,orig:attrs.xml'...[0m
+[1;90m    len = 66, map size = 317, exec speed = 35559 us, hash = d6806a1f24d158e8
+[0m[1;94m[*] [0mAttempting dry run with 'id:000001,time:0,execs:0,orig:dtd.xml'...[0m
+[1;90m    len = 104, map size = 426, exec speed = 33358 us, hash = f8be8b9d31e5c1d8
+[0m[1;94m[*] [0mAttempting dry run with 'id:000002,time:0,execs:0,orig:malformed.xml'...[0m
+[1;90m    len = 36, map size = 288, exec speed = 33791 us, hash = 038fdc074c0a552f
+[0m[1;94m[*] [0mAttempting dry run with 'id:000003,time:0,execs:0,orig:minimal.xml'...[0m
+[1;90m    len = 8, map size = 254, exec speed = 33206 us, hash = b3d271ec48cc5e25
+[0m[1;94m[*] [0mAttempting dry run with 'id:000004,time:0,execs:0,orig:mixed.xml'...[0m
+[1;90m    len = 139, map size = 424, exec speed = 33216 us, hash = 9695e58d02b3dfb4
+[0m[1;94m[*] [0mAttempting dry run with 'id:000005,time:0,execs:0,orig:namespace.xml'...[0m
+[1;90m    len = 62, map size = 352, exec speed = 40362 us, hash = 930dec9d8aa3b2be
+[0m[1;92m[+] [0mAll test cases processed.[0m
+[1;93m[!] [1;97mWARNING: [0m[1;91mThe target binary is pretty slow! See /opt/homebrew/Cellar/afl++/4.40c/share/doc/afl/fuzzing_in_depth.md#i-improve-the-speed[0m
+[1;92m[+] [0mHere are some useful stats:
+
+[1;90m    Test case count : [0m6 favored, 0 variable, 0 ignored, 6 total
+[1;90m       Bitmap range : [0m254 to 426 bits (average: 343.50 bits)
+[1;90m        Exec timing : [0m33.2k to 40.4k us (average: 34.9k us)
+[0m
+[1;94m[*] [0mNo -t option specified, so I'll use an exec timeout of 120 ms.[0m
+[1;92m[+] [0mAll set and ready to roll![0m
+[1;94m[*] [0mEntering queue cycle 1
+[0m
+[1;94m[*] [0mFuzzing test case #0 (6 total, 0 crashes saved[0m, state: started :-), mode=explore, perf_score=100, weight=1, favorite=1, was_fuzzed=0, exec_us=35559, hits=0, map=317, ascii=0, run_time=0:00:00:00, cvg=8.15%) FS (t=0:00:00:00 (0.00%), st=0, avg=0 ms, found=0/0)...[0m
+[?25h[1;91m
+
++++ Testing aborted programmatically +++
+[0m[1;93m[!] [0mTime limit was reached
+[1;94m[*] [0mStatistics: 27 new corpus items found, 8.74% coverage achieved, 0 crashes saved, 0 timeouts saved, total runtime 0 days, 0 hrs, 0 min, 10 sec[0m
+[1;94m[*] [0mWriting /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/results/fuzzing/afl-expat/default/fastresume.bin ...[0m
+[1;92m[+] [0mfastresume.bin successfully written with 63209 bytes.[0m
+[1;92m[+] [0mWe're done here. Have a nice day!
+[0m

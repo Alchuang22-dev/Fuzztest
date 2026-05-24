@@ -1,0 +1,2 @@
+/usr/bin/ar qc libexpat.a CMakeFiles/expat.dir/lib/xmlparse.c.o CMakeFiles/expat.dir/lib/xmlrole.c.o CMakeFiles/expat.dir/lib/xmltok.c.o CMakeFiles/expat.dir/lib/random_arc4random.c.o CMakeFiles/expat.dir/lib/random_arc4random_buf.c.o CMakeFiles/expat.dir/lib/random_dev_urandom.c.o CMakeFiles/expat.dir/lib/random_getentropy.c.o
+/opt/homebrew/opt/llvm/bin/llvm-ranlib libexpat.a

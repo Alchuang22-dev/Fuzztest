@@ -1,0 +1,26 @@
+scan-build: Using '/opt/homebrew/Cellar/llvm/22.1.6/bin/clang-22' for static analysis
+[ 12%] Building C object CMakeFiles/expat.dir/lib/xmlparse.c.o
+/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/third_party/libexpat/expat/lib/xmlparse.c:8079:48: warning: Subtraction of a null pointer (via field 'ptr') and a non-null pointer (via field 'start') results in undefined behavior [core.NullPointerArithm]
+ 8079 |       pool->ptr = pool->blocks->s + (pool->ptr - pool->start);
+      |                                            ~~~ ^       ~~~~~
+/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/third_party/libexpat/expat/lib/xmlparse.c:8092:51: warning: Subtraction of a null pointer (via field 'ptr') and a non-null pointer (via field 'start') results in undefined behavior [core.NullPointerArithm]
+ 8092 |     const ptrdiff_t offsetInsideBlock = pool->ptr - pool->start;
+      |                                               ~~~ ^       ~~~~~
+/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/third_party/libexpat/expat/lib/xmlparse.c:8092:51: warning: Subtraction of a null pointer (via field 'ptr') and a probably non-null pointer (via field 'start') may result in undefined behavior [core.NullPointerArithm]
+ 8092 |     const ptrdiff_t offsetInsideBlock = pool->ptr - pool->start;
+      |                                               ~~~ ^       ~~~~~
+/Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/third_party/libexpat/expat/lib/xmlparse.c:8155:46: warning: Subtraction of a null pointer (via field 'ptr') and a non-null pointer (via field 'start') results in undefined behavior [core.NullPointerArithm]
+ 8155 |       memcpy(tem->s, pool->start, (pool->ptr - pool->start) * sizeof(XML_Char));
+      |                                          ~~~ ^       ~~~~~
+4 warnings generated.
+[ 25%] Building C object CMakeFiles/expat.dir/lib/xmlrole.c.o
+[ 37%] Building C object CMakeFiles/expat.dir/lib/xmltok.c.o
+[ 50%] Building C object CMakeFiles/expat.dir/lib/random_arc4random.c.o
+[ 62%] Building C object CMakeFiles/expat.dir/lib/random_arc4random_buf.c.o
+[ 75%] Building C object CMakeFiles/expat.dir/lib/random_dev_urandom.c.o
+[ 87%] Building C object CMakeFiles/expat.dir/lib/random_getentropy.c.o
+[100%] Linking C static library libexpat.a
+[100%] Built target expat
+scan-build: Analysis run complete.
+scan-build: 3 bugs found.
+scan-build: Run 'scan-view /Users/zhayi/University/大四下/软件度量技术/Fuzztest/ZYpart/results/static-analysis/scan-build/2026-05-24-192426-47850-1' to examine bug reports.
