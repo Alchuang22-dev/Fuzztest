@@ -1,5 +1,0 @@
-<!DOCTYPE root [
-  <!ELEMENT root (#PCDATA)>
-  <!ENTITY sample "entity-value">
-]>
-<root>&sample;</root>

@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<root>
-  <!-- comment -->
-  <![CDATA[<not-a-tag>]]>
-  <?pi instruction?>
-  <child attr="&amp;">value</child>
-</root>
