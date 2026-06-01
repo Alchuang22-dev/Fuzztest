@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SRC_DIR="$ROOT_DIR/third_party/libexpat/expat"
-BUILD_DIR="$ROOT_DIR/build/libexpat-apple-asan"
+BUILD_DIR="$ROOT_DIR/build/libexpat-asan"
 CUSTOM_BUILD_DIR="$ROOT_DIR/build/custom-fuzzer"
 AFL_BUILD_DIR="$ROOT_DIR/build/libexpat-afl"
 AFL_BIN_DIR="$ROOT_DIR/build/afl"
@@ -97,6 +97,50 @@ else
   echo "afl-clang-fast not found; skipping AFL++ harness"
 fi
 
+# Build libFuzzer version of expat_stream_fuzzer
+"$CLANG" -g -O1 -fno-omit-frame-pointer \
+  -fsanitize=address,undefined,fuzzer \
+  -I"$SRC_DIR/lib" \
+  "$ROOT_DIR/fuzz/expat_stream_fuzzer.c" \
+  "$LIBEXPAT_A" \
+  -o "$CUSTOM_BUILD_DIR/expat_stream_fuzzer"
+echo "built libFuzzer fuzzer: $CUSTOM_BUILD_DIR/expat_stream_fuzzer"
+
+# Also build official libexpat fuzzers if possible
+OFFICIAL_BUILD_DIR="$ROOT_DIR/build/libexpat-official-fuzz"
+cmake -S "$SRC_DIR" -B "$OFFICIAL_BUILD_DIR" -G Ninja \
+  -DCMAKE_C_COMPILER="$CLANG" \
+  -DCMAKE_CXX_COMPILER="$CLANGXX" \
+  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+  -DCMAKE_C_FLAGS="-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined,fuzzer" \
+  -DCMAKE_CXX_FLAGS="-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined" \
+  -DCMAKE_EXE_LINKER_FLAGS="-fsanitize=address,undefined,fuzzer" \
+  -DEXPAT_BUILD_DOCS=OFF \
+  -DEXPAT_BUILD_EXAMPLES=OFF \
+  -DEXPAT_BUILD_TESTS=OFF \
+  -DEXPAT_BUILD_TOOLS=OFF \
+  -DEXPAT_SHARED_LIBS=OFF \
+  -DEXPAT_BUILD_FUZZERS=ON 2>/dev/null || \
+cmake -S "$SRC_DIR" -B "$OFFICIAL_BUILD_DIR" \
+  -DCMAKE_C_COMPILER="$CLANG" \
+  -DCMAKE_CXX_COMPILER="$CLANGXX" \
+  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+  -DCMAKE_C_FLAGS="-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined,fuzzer" \
+  -DCMAKE_CXX_FLAGS="-g -O1 -fno-omit-frame-pointer -fsanitize=address,undefined" \
+  -DCMAKE_EXE_LINKER_FLAGS="-fsanitize=address,undefined,fuzzer" \
+  -DEXPAT_BUILD_DOCS=OFF \
+  -DEXPAT_BUILD_EXAMPLES=OFF \
+  -DEXPAT_BUILD_TESTS=OFF \
+  -DEXPAT_BUILD_TOOLS=OFF \
+  -DEXPAT_SHARED_LIBS=OFF \
+  -DEXPAT_BUILD_FUZZERS=ON || \
+  echo "could not build official fuzzers, skipping"
+
+if [[ -d "$OFFICIAL_BUILD_DIR/fuzz" ]]; then
+  cmake --build "$OFFICIAL_BUILD_DIR" 2>/dev/null && \
+    echo "built official libexpat fuzzers in $OFFICIAL_BUILD_DIR/fuzz/" || \
+    echo "official fuzzer build failed, skipping"
+fi
+
 echo "built ASAN replay harness: $CUSTOM_BUILD_DIR/expat_file_harness_asan"
 echo "linked library: $LIBEXPAT_A"
-echo "libFuzzer source is available at fuzz/expat_stream_fuzzer.c for LLVM environments with libFuzzer runtime."

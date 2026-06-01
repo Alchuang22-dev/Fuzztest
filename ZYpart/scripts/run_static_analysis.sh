@@ -18,7 +18,7 @@ if command -v cppcheck >/dev/null 2>&1; then
     -DXML_DTD \
     -DXML_GE=1 \
     -DXML_CONTEXT_BYTES=1024 \
-    -I "$ROOT_DIR/build/libexpat-apple-asan" \
+    -I "$ROOT_DIR/build/libexpat-asan" \
     -I "$SRC_DIR/lib" \
     "$SRC_DIR/lib" \
     2> "$OUT_DIR/cppcheck.xml"
@@ -31,7 +31,7 @@ if command -v cppcheck >/dev/null 2>&1; then
     -DXML_DTD \
     -DXML_GE=1 \
     -DXML_CONTEXT_BYTES=1024 \
-    -I "$ROOT_DIR/build/libexpat-apple-asan" \
+    -I "$ROOT_DIR/build/libexpat-asan" \
     -I "$SRC_DIR/lib" \
     "$SRC_DIR/lib" \
     > "$OUT_DIR/cppcheck.txt" 2>&1

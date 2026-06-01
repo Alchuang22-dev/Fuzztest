@@ -1,0 +1,22 @@
+# Build outputs
+ZYpart/build/
+
+# Fuzzing results (crashes, corpus, logs)
+ZYpart/results/
+
+# Fuzzer seed corpus (generated)
+ZYpart/fuzz/seeds/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/
